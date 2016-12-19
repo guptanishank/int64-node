@@ -264,5 +264,12 @@ Int64.prototype = {
    */
   inspect: function() {
     return '[Int64 value:' + this + ' octets:' + this.toOctetString(' ') + ']';
-  }
+  },
+
+  /**
+   * Convert int-64 object to number for json 
+   */
+   toJSON: function(radix) {
+    return this.toNumber(false);
+  },
 };
